@@ -9,7 +9,7 @@ class WebSocketClient
         ws.Options.KeepAliveInterval = TimeSpan.FromSeconds(30);
         ws.Options.SetRequestHeader("Authorization", "Bearer <token>");
 
-        var uri = new Uri("ws://localhost:5000/jdpi/api/v1/webhook/baixa_callback/subscribe?enableHeartbeat=true");
+        var uri = new Uri("ws://localhost:5000/dpi/api/v1/webhook/baixa_callback/subscribe?enableHeartbeat=true");
         await ws.ConnectAsync(uri, CancellationToken.None);
         Console.WriteLine("[Client] Conectado ao WebSocket!");
 

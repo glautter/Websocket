@@ -7,7 +7,7 @@ var app = builder.Build();
 
 app.UseWebSockets();
 
-app.Map("/jdpi/api/v1/webhook/{evento}/subscribe", async (HttpContext context, string evento) =>
+app.Map("/dpi/api/v1/webhook/{evento}/subscribe", async (HttpContext context, string evento) =>
 {
     if (!context.WebSockets.IsWebSocketRequest)
     {
